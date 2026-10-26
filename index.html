@@ -223,16 +223,28 @@
   }
 
   /* program */
-  .program-what{
+  .program-what-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+    margin-bottom:26px;
+  }
+  .program-what-card{
     background:#fff;
     border:1px solid #efd9e8;
     border-radius:var(--radius);
-    padding:24px;
-    margin-bottom:26px;
+    padding:22px 20px;
     box-shadow:var(--shadow-sm);
   }
-  .program-what p{font-size:14.5px;line-height:1.7;color:var(--text);}
-  .program-what b{color:var(--plum-dark);}
+  .program-what-card .icon{font-size:24px;margin-bottom:10px;}
+  .program-what-card h5{
+    font-size:14.5px;
+    color:var(--plum-dark);
+    font-weight:800;
+    margin-bottom:8px;
+    letter-spacing:.2px;
+  }
+  .program-what-card p{font-size:13.5px;line-height:1.65;color:var(--text);}
 
   .steps-grid{
     display:grid;
@@ -408,6 +420,7 @@
 
   @media(max-width:860px){
     .problem-grid{grid-template-columns:1fr 1fr;}
+    .program-what-grid{grid-template-columns:1fr;}
     .steps-grid{grid-template-columns:1fr 1fr;}
     .results-grid{grid-template-columns:1fr 1fr;}
     .call-grid{grid-template-columns:1fr;}
@@ -539,8 +552,22 @@
     <h2 class="section-title">PCOS Corporate Reset</h2>
     <p class="section-sub">A hormone-focused reset built specifically for women who can't put their career on hold to fix their health.</p>
 
-    <div class="program-what">
-      <p><b>What it is:</b> A structured 90-day program that works with your 9-to-6 (or 9-to-9) reality — not against it. <b>Who it's for:</b> Corporate women 25–40 with PCOS who are tired of generic diet plans that ignore their work schedule. <b>What's included:</b> a personalised nutrition plan, cycle tracking, weekly 1:1 check-ins, a stress &amp; sleep protocol, and ongoing community support.</p>
+    <div class="program-what-grid">
+      <div class="program-what-card">
+        <div class="icon">🎯</div>
+        <h5>What it is</h5>
+        <p>A structured 90-day program that works with your 9-to-6 (or 9-to-9) reality — not against it.</p>
+      </div>
+      <div class="program-what-card">
+        <div class="icon">👩‍💼</div>
+        <h5>Who it's for</h5>
+        <p>Corporate women 25–40 with PCOS who are tired of generic diet plans that ignore their work schedule.</p>
+      </div>
+      <div class="program-what-card">
+        <div class="icon">📦</div>
+        <h5>What's included</h5>
+        <p>A personalised nutrition plan, cycle tracking, weekly 1:1 check-ins, a stress &amp; sleep protocol, and ongoing community support.</p>
+      </div>
     </div>
 
     <p class="eyebrow" style="margin-bottom:16px;">HOW IT WORKS</p>
